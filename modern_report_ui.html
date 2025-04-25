@@ -1,0 +1,99 @@
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            transition: color var(--transition-speed);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-sm);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+            background-color: var(--neutral-color);
+        }
+
+        /* Dashboard Layout */
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+
+        @media (min-width: 992px) {
+            .dashboard {
+                grid-template-columns: 280px 1fr;
+            }
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: var(--card-bg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            padding: var(--spacing-lg);
+            height: fit-content;
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stock-list {
+            list-style: none;
+            margin-top: var(--spacing-md);
+        }
+
+        .stock-item {
+            padding: var(--spacing-md);
+            border-radius: var(--radius-sm);
+            margin-bottom: var(--spacing-sm);
+            cursor: pointer;
+            transition: background-color var(--transition-speed);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stock-item:hover, .stock-item.active {
+            background-color: var(--neutral-color);
+        }
+
+        .stock-item.active {
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .stock-name {
+            font-weight: 500;
+        }
+
+        .stock-price {
+            font-weight: 600;
+        }
+
+        .stock-change {
+            font-size: 0.85rem;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+        }
+
+        .stock-change.positive {
+            color: #2ecc71;
+        }
